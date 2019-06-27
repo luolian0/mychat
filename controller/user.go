@@ -38,6 +38,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 			logrus.Error(err)
 			res.RespFail(w, err.Error())
 		} else {
+			logrus.Info(user.Mobile + " 注册成功!")
 			res.RespOk(w, user, "操作成功！")
 		}
 	}
