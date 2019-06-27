@@ -1,12 +1,13 @@
 package main
 
 import (
+	"mychat/controller"
 	"net/http"
-
-	_ "./base"
 )
 
 func main() {
+	http.HandleFunc("/user/login", controller.Login)
+	http.HandleFunc("/user/register", controller.Register)
 	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
 		panic(err)
