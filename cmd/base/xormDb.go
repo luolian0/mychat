@@ -14,7 +14,7 @@ import (
 var Db *xorm.Engine
 
 func init() {
-	driverName := ""
+	driverName := "mysql"
 	dataSourceName := ""
 	logrus.Info("初始化数据库...")
 	dbEngine, err := xorm.NewEngine(driverName, dataSourceName)
