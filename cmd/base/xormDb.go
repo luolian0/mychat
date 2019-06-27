@@ -15,7 +15,7 @@ var Db *xorm.Engine
 
 func init() {
 	driverName := "mysql"
-	dataSourceName := ""
+	dataSourceName := "root:***@tcp(47.97.176.148:3306)/po0?parseTime=true"
 	logrus.Info("初始化数据库...")
 	dbEngine, err := xorm.NewEngine(driverName, dataSourceName)
 	if err != nil {
